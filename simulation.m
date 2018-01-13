@@ -9,9 +9,9 @@ tFinal = 80;
 tSpan = 0:dt:tFinal;
 x0 = [0;0;0;1];
 [t, x_c] = ode45(@dynamic_c, tSpan, x0);
-x_c = x_c' ;
+x_c = x_c' ; 
 
-%discrete reality
+%discrete reality 
 x_d_real(:,1) = x0;
 Sigma_Q = [100;100;0.0005;0.0005];
 Sigma_Q = diag(Sigma_Q);
