@@ -125,26 +125,4 @@ legend([track_xd, track_xd_real, sigma_position,...
     'trajectory of estimation', 'trajectory of reality', '3 sigma of position',...
     'heading of estimation', '3 sigma of heading', 'heading of reality');
 
-%% useless
-
-%plot(x_c(1,:), x_c(2,:),'ro',x_d_real(1,:),x_d_real(2,:),'b', y_ob(1,:), y_ob(2,:), 'g');
-% 
-% slmin = 1;
-% slmax = size(x_d,2);
-% plot(x_d(1,:), x_d(2,:),'b', x_d_real(1,:), x_d_real(2,:), 'r');
-% hsl = uicontrol('Style','slider','Min',slmin,'Max',slmax,...
-%                 'SliderStep',[1 1]./(slmax-slmin),'Value',1,...
-%                 'Position',[20 20 200 20]);
-% set(hsl,'Callback',@(hObject,eventdata) ...
-%     plot(x_d_real(1,:),x_d_real(2,:),'g', x_d(1,:), x_d(2,:), 'b',...
-%          x_d(1,round(get(hObject,'Value'))),x_d(2,round(get(hObject,'Value'))), 'bo', ...
-%          x_d_real(1,round(get(hObject,'Value'))),x_d_real(2,round(get(hObject,'Value'))), 'ro')...
-%          )
-            
-% set(hsl,'Callback',@(hObject,eventdata) plot(x_d(1,round(get(hObject,'Value'))),
-%                                              x_d(2,round(get(hObject,'Value'))), 'bo',
-%                                              x_d_real(1,round(get(hObject,'Value'))),
-%                                              x_d_real(2,round(get(hObject,'Value'))), 'ro'
-%                                              )) 
-
 
