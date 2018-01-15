@@ -1,19 +1,13 @@
-function dxdt = dynamic_c(t, x)
+function dxdt = dynamic_c(t, x, k, y_ob, rand_vec)
 v = trac_v(t);
 w = trac_w(t);
-dxdt(1:4,1) = 0;
-% 
-% mu = sqrt(x(3)^2 + x(4)^2);
-% x(3) = x(3) / mu;
-% x(4) = x(4) / mu;
+A = zeros(4);
+A(1,3) = v;
+A(2,4) = v;
+A(3,4) =-w;
+A(4,3) = w;
 
-
-dxdt(1) = v * x(3);
-dxdt(2) = v * x(4);
-dxdt(3) =-w * x(4);
-dxdt(4) = w * x(3);
-
-
+dxdt = A*x + k*(y_ob - x) + rand_vec;
 end
 
 
